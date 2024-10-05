@@ -11,7 +11,7 @@ class CreatePemesananTable extends Migration
         Schema::create('pemesanan', function (Blueprint $table) {
             $table->increments('ID_Pemesanan');
             $table->unsignedInteger('User_ID_User')->nullable();
-            $table->unsignedInteger('Buku_ID_Buku')->nullable();
+            $table->unsignedInteger('Buku_ID_Buku')->nullable(); // Menggunakan 'Buku_ID_Buku'
             $table->date('Tanggal_Pemesanan')->nullable();
 
             $table->foreign('User_ID_User')
@@ -21,7 +21,7 @@ class CreatePemesananTable extends Migration
 
             $table->foreign('Buku_ID_Buku')
                   ->references('ID_Buku')
-                  ->on('buku')
+                  ->on('buku') // Menggunakan tabel 'buku'
                   ->onDelete('set null');
         });
     }
@@ -31,4 +31,3 @@ class CreatePemesananTable extends Migration
         Schema::dropIfExists('pemesanan');
     }
 }
-

@@ -40,60 +40,6 @@
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="assets/css/demo.css" />
-    
-    <!--kebutuhan table-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.css">
-    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        .table-hover tbody tr:hover {
-            background-color: #f1f1f1;
-            transition: 0.2s;
-        }
-
-        .btn-sm {
-            padding: 5px 10px;
-            font-size: 0.9em;
-        }
-
-        .table-striped tbody tr:nth-of-type(odd) {
-            background-color: rgba(0, 0, 0, .05);
-        }
-
-        .img-thumbnail {
-            border-radius: 10%;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .img-thumbnail:hover {
-            transform: scale(1.1);
-        }
-
-        th {
-            text-transform: uppercase;
-        }
-
-        h2 {
-            font-weight: bold;
-            color: #343a40;
-        }
-
-        .table thead {
-            font-weight: bold;
-            letter-spacing: 0.05em;
-        }
-
-        .table-responsive {
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-            width: 200%;  /* Mengubah lebar container menjadi 200% */
-            max-width: none;  /* Menghapus batasan lebar maksimum */
-            margin: 0 auto;  /* Membuat container tetap di tengah */
-        }
-    </style>
 
   </head>
   <body>
@@ -518,113 +464,71 @@
           </nav>
           <!-- End Navbar -->
         </div>
+
+        <div class="container">
+            <div class="page-inner">
+              <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
+                <div>
+                  <h3 class="fw-bold mb-3">Data Buku</h3>
+                </div>
+                <div class="ms-md-auto py-2 py-md-0">
+                  <a href="#" class="btn btn-label-info btn-round me-2">Atur</a>
+                  <a href="#" class="btn btn-primary btn-round">Tambah Buku</a>
+                </div>
+              </div>
               
-              <!-- Container Section Start -->
-              <div class="container">
-                <div class="page-inner">
-                    <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
-                        <div>
-                            <h3 class="fw-bold mb-3">Data Buku</h3>
-                        </div>
-                        <div class="ms-md-auto py-2 py-md-0">
-                            <a href="#" class="btn btn-label-info btn-round me-2">Atur</a>
-                            <a href="{{ route('adm-buku.create') }}" class="btn btn-primary btn-round">Tambah Buku</a>
+              <!-- SECTION -->
+              <div class="container-fluid py-5">
+                <div class="container">
+                    <div class="table-responsive bg-white p-4 rounded shadow-sm">
+                        <div class="row g-5 align-items-center justify-content-center">
+                            <div class="col-lg-10 wow fadeIn" data-wow-delay="0.5s">
+                                <table class="table text-align center">
+                                    <thead>
+                                        <tr>
+                                            <td colspan="2" class="text-center">
+                                                <h1 class="text-3xl font-bold mb-3">Biodata Mahasiswa</h1>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-bold" style="width: 30%;">Nama Lengkap</td>
+                                            <td>Arkan Syafiq At'taqy</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-bold">NIM</td>
+                                            <td>164221062</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-bold">Email</td>
+                                            <td>arkan.syafiq.attaqy-2022@ftmm.unair.ac.id</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-bold">Nomor Telepon</td>
+                                            <td>085754028591</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-bold">Program Studi</td>
+                                            <td>Teknologi Sains Data</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-bold">Angkatan</td>
+                                            <td>2022</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="form-group text-center mt-4">
+                                <a href="{{ url()->previous() }}" class="btn btn-danger">Kembali</a>
+                            </div>
                         </div>
                     </div>
-                    
-                    <!-- Table Section Start -->
-                    <div class="container-fluid py-5">
-                      <div class="container">
-                          <div class="bg-white p-4 rounded shadow-sm">
-                              <h2 class="mb-4 text-center">Data Buku</h2>
-                              <div class="row mb-3">
-                                  <div class="col-12 col-md-6 mb-2 mb-md-0">
-                                      <div class="d-flex align-items-center">
-                                          <label for="dataBukuTable_length" class="me-2">Tampilkan</label>
-                                          <select name="dataBukuTable_length" id="dataBukuTable_length" class="form-select form-select-sm w-auto">
-                                              <option value="5">5</option>
-                                              <option value="10">10</option>
-                                              <option value="25">25</option>
-                                              <option value="50">50</option>
-                                              <option value="-1">All</option>
-                                          </select>
-                                          <span class="ms-2">data</span>
-                                      </div>
-                                  </div>
-                                  <div class="col-12 col-md-6">
-                                      <div class="input-group">
-                                          <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
-                                          <input type="search" class="form-control" placeholder="Cari..." aria-label="Search" id="dataBukuTable_filter">
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="table-responsive">
-                                  <table id="dataBukuTable" class="table table-hover table-striped align-middle">
-                                      <thead class="bg-primary text-white">
-                                          <tr>
-                                              <th>No.</th>
-                                              <th>Sampul</th>
-                                              <th>Judul</th>
-                                              <th>Author</th>
-                                              <th>Penerbit</th>
-                                              <th>Tahun</th>
-                                              <th>Kategori</th>
-                                              <th>Halaman</th>
-                                              <th>ISBN</th>
-                                              <th>Bahasa</th>
-                                              <th>Berat (g)</th>
-                                              <th>Ukuran (cm)</th>
-                                              <th>Stok</th>
-                                              <th>Akses</th>
-                                              <th>Aksi</th>
-                                          </tr>
-                                      </thead>
-                                      <tbody>
-                                          @foreach($books as $book)
-                                          <tr>
-                                              <td>{{ $loop->iteration }}</td>
-                                              <td><img src="{{ $book->Sampul }}" alt="Cover {{ $book->Judul }}" class="img-thumbnail" style="width: 80px; height: auto;"></td>
-                                              <td>{{ $book->Judul }}</td>
-                                              <td>{{ $book->Author ?? 'N/A' }}</td>
-                                              <td>{{ $book->Penerbit ?? 'N/A' }}</td>
-                                              <td>{{ $book->Tahun ?? 'N/A' }}</td>
-                                              <td>{{ $book->Kategori }}</td>
-                                              <td>{{ $book->Halaman ?? 'N/A' }}</td>
-                                              <td>{{ $book->ISBN ?? 'N/A' }}</td>
-                                              <td>{{ $book->Bahasa }}</td>
-                                              <td>{{ $book->Berat ?? 'N/A' }}</td>
-                                              <td>{{ $book->Panjang && $book->Lebar ? $book->Panjang . 'x' . $book->Lebar : 'N/A' }}</td>
-                                              <td>{{ $book->Stok }}</td>
-                                              <td>{{ $book->Akses }}</td>
-                                              <td>
-                                                  <div class="d-flex justify-content-center">
-                                                      <a href="{{ route('adm-buku.show', $book->ID_Buku) }}" class="btn btn-outline-primary btn-sm me-2" title="View">
-                                                          <i class="fas fa-eye"></i>
-                                                      </a>
-                                                      <a href="{{ route('adm-buku.edit', $book->ID_Buku) }}" class="btn btn-outline-warning btn-sm me-2" title="Edit">
-                                                          <i class="fas fa-edit"></i>
-                                                      </a>
-                                                      <form action="{{ route('adm-buku.destroy', $book->ID_Buku) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus buku ini?');" class="d-inline">
-                                                          @csrf
-                                                          @method('DELETE')
-                                                          <button type="submit" class="btn btn-outline-danger btn-sm" title="Delete">
-                                                              <i class="fas fa-trash-alt"></i>
-                                                          </button>
-                                                      </form>
-                                                  </div>
-                                              </td>
-                                          </tr>
-                                          @endforeach
-                                      </tbody>
-                                  </table>
-                              </div>
-                              <div id="dataBukuTable_paginate" class="dataTables_paginate paging_simple_numbers mt-3"></div>
-                              <div id="dataBukuTable_info" class="dataTables_info mt-3"></div>
-                          </div>
-                      </div>
-                  </div>
                 </div>
             </div>
+
+            </div>
+        </div>
     
         <footer class="footer">
           <div class="container-fluid d-flex justify-content-between">
@@ -910,42 +814,5 @@
         fillColor: "rgba(255, 165, 52, .14)",
       });
     </script>
-
-    <!-- Table -->
-    <script>
-      $(document).ready(function () {
-          var table = $('#dataBukuTable').DataTable({
-              "pageLength": 5,
-              "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
-              "language": {
-                  "lengthMenu": "Tampilkan _MENU_ data",
-                  "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
-                  "search": "Cari:",
-                  "paginate": {
-                      "first": "Pertama",
-                      "last": "Terakhir",
-                      "next": "Berikutnya",
-                      "previous": "Sebelumnya"
-                  },
-                  "zeroRecords": "Tidak ada data yang cocok",
-                  "infoEmpty": "Menampilkan 0 sampai 0 dari 0 data",
-                  "infoFiltered": "(disaring dari _MAX_ total data)"
-              },
-              "dom": 'rt<"row"<"col-sm-12 col-md-5"i><"col-sm-12 col-md-7"p>>',
-              "ordering": true,
-              "searching": true
-          });
-      
-          // Update search on input change
-          $('#dataBukuTable_filter').on('keyup', function() {
-              table.search(this.value).draw();
-          });
-      
-          // Update page length on input change
-          $('#dataBukuTable_length').on('change', function() {
-              table.page.len(this.value).draw();
-          });
-      });
-      </script>
   </body>
 </html>

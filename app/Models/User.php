@@ -11,11 +11,6 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $table = 'user';        // Specify custom table name
     protected $primaryKey = 'ID_User'; // Specify custom primary key
 
@@ -23,27 +18,31 @@ class User extends Authenticatable
         'Role', 'Email', 'Password', 'NIM', 'Nama', 'No_Telp', 'Program_Studi', 'Angkatan',
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
     protected $hidden = [
-        'password',
+        'Password', // Pastikan konsisten dengan nama field di database
         'remember_token',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'Password' => 'hashed',
+    ];
+
+    // Menambahkan relasi ke Pemesanan
+    public function pemesanan()
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return $this->hasMany(Pemesanan::class, 'User_ID_User', 'ID_User');
+    }
+
+    // Menambahkan relasi ke Peminjaman
+    public function peminjaman()
+    {
+        return $this->hasMany(Peminjaman::class, 'User_ID_User', 'ID_User');
+    }
+
+    // Menambahkan relasi ke Pengembalian
+    public function pengembalian()
+    {
+        return $this->hasMany(Pengembalian::class, 'User_ID_User', 'ID_User');
     }
 }
-

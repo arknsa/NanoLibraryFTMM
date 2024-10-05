@@ -109,7 +109,7 @@
                 <div class="collapse" id="base">
                   <ul class="nav nav-collapse">
                     <li>
-                      <a href="/adm-buku">
+                      <a href="/databuku">
                         <span class="sub-item">Data Buku</span>
                       </a>
                     </li>

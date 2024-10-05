@@ -12,7 +12,7 @@
       src="{{ asset('assets1/img/logo.svg') }}"
       type="image/x-icon"
     />
-    
+
     <!-- Fonts and icons -->
     <script src="assets/js/plugin/webfont/webfont.min.js"></script>
     <script>
@@ -40,63 +40,6 @@
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="assets/css/demo.css" />
-    
-    <!--kebutuhan table-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.css">
-    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <style>
-        .table-hover tbody tr:hover {
-            background-color: #f1f1f1;
-            transition: background-color 0.2s ease;
-        }
-
-        .btn-sm {
-            padding: 5px 10px;
-            font-size: 0.9em;
-        }
-
-        .table-striped tbody tr:nth-of-type(odd) {
-            background-color: rgba(0, 0, 0, 0.05);
-        }
-
-        th {
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        h2 {
-            font-weight: bold;
-            color: #343a40;
-        }
-
-        .table thead {
-            font-weight: bold;
-            letter-spacing: 0.05em;
-        }
-
-        .table-responsive {
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-            overflow-x: auto; /* Ensures responsiveness */
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .table-responsive {
-                padding: 1rem;
-            }
-
-            .btn-sm {
-                padding: 4px 8px;
-                font-size: 0.8em;
-            }
-        }
-    </style>
 
   </head>
   <body>
@@ -143,73 +86,73 @@
                   <span class="caret"></span>
                 </a>
                 <div class="collapse" id="dashboard">
-                    <ul class="nav nav-collapse">
-                      <li>
-                        <a href="/adm-home">
-                          <span class="sub-item">Dashboard</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-section">
-                  <span class="sidebar-mini-icon">
-                    <i class="fa fa-ellipsis-h"></i>
-                  </span>
-                  <h4 class="text-section">Components</h4>
-                </li>
-                <li class="nav-item">
-                  <a data-bs-toggle="collapse" href="#base">
-                    <i class="fas fa-layer-group"></i>
-                    <p>Data</p>
-                    <span class="caret"></span>
-                  </a>
-                  <div class="collapse" id="base">
-                    <ul class="nav nav-collapse">
-                      <li>
-                        <a href="/databuku">
-                          <span class="sub-item">Data Buku</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/adm-kunjungan">
-                          <span class="sub-item">Data Kunjungan</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="adm-mahasiswa">
-                          <span class="sub-item">Data Mahasiswa</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a data-bs-toggle="collapse" href="#sidebarLayouts">
-                    <i class="fas fa-th-list"></i>
-                    <p>Layanan</p>
-                    <span class="caret"></span>
-                  </a>
-                  <div class="collapse" id="sidebarLayouts">
-                    <ul class="nav nav-collapse">
-                      <li>
-                        <a href="/adm-peminjaman">
-                          <span class="sub-item">Peminjaman</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/adm-pengembalian">
-                          <span class="sub-item">Pengembalian</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/adm-denda">
-                          <span class="sub-item">Denda</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href="/adm-home">
+                        <span class="sub-item">Dashboard</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-section">
+                <span class="sidebar-mini-icon">
+                  <i class="fa fa-ellipsis-h"></i>
+                </span>
+                <h4 class="text-section">Components</h4>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#base">
+                  <i class="fas fa-layer-group"></i>
+                  <p>Data</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="base">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href="/databuku">
+                        <span class="sub-item">Data Buku</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/adm-kunjungan">
+                        <span class="sub-item">Data Kunjungan</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="adm-mahasiswa">
+                        <span class="sub-item">Data Mahasiswa</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarLayouts">
+                  <i class="fas fa-th-list"></i>
+                  <p>Layanan</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="sidebarLayouts">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href="/adm-peminjaman">
+                        <span class="sub-item">Peminjaman</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/adm-pengembalian">
+                        <span class="sub-item">Pengembalian</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/adm-denda">
+                        <span class="sub-item">Denda</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
               <li class="nav-item">
                 <a href="/">
                   <i class="fas fa-desktop"></i>
@@ -526,97 +469,110 @@
             <div class="page-inner">
               <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
                 <div>
-                  <h3 class="fw-bold mb-3">Data Peminjaman</h3>
+                  <h3 class="fw-bold mb-3">Buat Data Buku</h3>
                 </div>
                 <div class="ms-md-auto py-2 py-md-0">
                   <a href="#" class="btn btn-label-info btn-round me-2">Atur</a>
-                  <a href="#" class="btn btn-primary btn-round">Tambah Peminjaman</a>
+                  <a href="#" class="btn btn-primary btn-round">Tambah Buku</a>
                 </div>
               </div>
               
-              <!-- Table Section Start -->
+              <!-- FORM SECTION -->
               <div class="container-fluid py-5">
-                <div class="container">
-                    <div class="table-responsive bg-white p-4 rounded shadow-sm">
-                        <h2 class="mb-4 text-center">Data Peminjaman</h2>
-                          <table id="dataPeminjamanTable" class="table table-hover table-striped align-middle text-center">
-                              <thead class="bg-primary text-white">
-                                <tr>
-                                  <th>No</th>
-                                  <th>No. Peminjaman</th>
-                                  <th>NIM</th>
-                                  <th>Nama</th>
-                                  <th>Judul Buku</th>
-                                  <th>Tgl. Peminjaman</th>
-                                  <th>Tgl. Pengembalian</th>
-                                  <th>Status</th>
-                                  <th>Denda</th>
-                                  <th>Aksi</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>123</td>
-                                    <td>164221062</td>
-                                    <td>Arkan Syafiq At'taqy</td>
-                                    <td>Attack on Titan Vol. 1</td>
-                                    <td>13-09-2024</td>
-                                    <td>16-09-2024</td>
-                                    <td>Dipinjam</td>
-                                    <td>Rp. 0</td>
-                                    <td>
-                                        <div class="d-flex justify-content-center">
-                                            <a href="#" class="btn btn-outline-primary btn-sm me-2" title="Return"><i class="fas fa-undo"></i></a>
-                                            <a href="#" class="btn btn-outline-warning btn-sm me-2" title="Edit"><i class="fas fa-edit"></i></a>
-                                            <a href="#" class="btn btn-outline-danger btn-sm" title="Delete"><i class="fas fa-trash-alt"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>456</td>
-                                    <td>163221062</td>
-                                    <td>Franky</td>
-                                    <td>Attack on Titan Vol. 2</td>
-                                    <td>16-09-2024</td>
-                                    <td>19-09-2024</td>
-                                    <td>Dipinjam</td>
-                                    <td>Rp. 0</td>
-                                    <td>
-                                        <div class="d-flex justify-content-center">
-                                            <a href="#" class="btn btn-outline-primary btn-sm me-2" title="Return"><i class="fas fa-undo"></i></a>
-                                            <a href="#" class="btn btn-outline-warning btn-sm me-2" title="Edit"><i class="fas fa-edit"></i></a>
-                                            <a href="#" class="btn btn-outline-danger btn-sm" title="Delete"><i class="fas fa-trash-alt"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>789</td>
-                                    <td>162112333031</td>
-                                    <td>Brook</td>
-                                    <td>Attack on Titan Vol. 3</td>
-                                    <td>19-09-2024</td>
-                                    <td>22-09-2024</td>
-                                    <td>Dipinjam</td>
-                                    <td>Rp. 0</td>
-                                    <td>
-                                        <div class="d-flex justify-content-center">
-                                            <a href="#" class="btn btn-outline-primary btn-sm me-2" title="Return"><i class="fas fa-undo"></i></a>
-                                            <a href="#" class="btn btn-outline-warning btn-sm me-2" title="Edit"><i class="fas fa-edit"></i></a>
-                                            <a href="#" class="btn btn-outline-danger btn-sm" title="Delete"><i class="fas fa-trash-alt"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                              </tbody>
-                          </table>
-                    </div>
-                </div>
+                  <div class="container">
+                      <div class="table-responsive bg-white p-4 rounded shadow-sm">
+                          <h2 class="mb-4 text-center">Data Buku</h2>
+                          <form>
+                              <div class="form-group">
+                                  <label for="Judul">Judul</label>
+                                  <input type="text" class="form-control" id="Judul" name="Judul" maxlength="255" required>
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="Author">Author</label>
+                                  <input type="text" class="form-control" id="Author" name="Author" maxlength="100">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="Sampul">Sampul (URL)</label>
+                                  <input type="url" class="form-control" id="Sampul" name="Sampul" maxlength="255" required>
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="Deskripsi">Deskripsi</label>
+                                  <textarea class="form-control" id="Deskripsi" name="Deskripsi" maxlength="999" required></textarea>
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="Halaman">Halaman</label>
+                                  <input type="text" class="form-control" id="Halaman" name="Halaman" maxlength="255" required>
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="Penerbit">Penerbit</label>
+                                  <input type="text" class="form-control" id="Penerbit" name="Penerbit" maxlength="255">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="Tahun">Tahun</label>
+                                  <input type="number" class="form-control" id="Tahun" name="Tahun">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="Berat">Berat</label>
+                                  <input type="number" class="form-control" id="Berat" name="Berat">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="ISBN">ISBN</label>
+                                  <input type="number" class="form-control" id="ISBN" name="ISBN">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="Lebar">Lebar</label>
+                                  <input type="number" class="form-control" id="Lebar" name="Lebar">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="Panjang">Panjang</label>
+                                  <input type="number" class="form-control" id="Panjang" name="Panjang">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="Bahasa">Bahasa</label>
+                                  <input type="text" class="form-control" id="Bahasa" name="Bahasa" maxlength="255" required>
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="Kategori">Kategori</label>
+                                  <input type="text" class="form-control" id="Kategori" name="Kategori" maxlength="255" required>
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="Stok">Stok</label>
+                                  <input type="number" class="form-control" id="Stok" name="Stok" value="0" required>
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="Akses">Akses</label>
+                                  <select class="form-control" id="Akses" name="Akses" required>
+                                      <option value="Dapat dipinjam">Dapat dipinjam</option>
+                                      <option value="Baca di tempat">Baca di tempat</option>
+                                  </select>
+                              </div>
+
+                              <div class="form-group">
+                                  <!-- Button section with back button first (red), then submit button (blue) -->
+                                  <a href="{{ url()->previous() }}" class="btn btn-danger">Kembali</a>
+                                  <button type="submit" class="btn btn-primary ml-2">Simpan</button>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
               </div>
             </div>
-          </div>
-
+        </div>
+    
         <footer class="footer">
           <div class="container-fluid d-flex justify-content-between">
             <nav class="pull-left">
@@ -900,27 +856,6 @@
         lineColor: "#ffa534",
         fillColor: "rgba(255, 165, 52, .14)",
       });
-    </script>
-
-    <!-- Table -->
-    <script>
-        $(document).ready(function () {
-            $('#dataPeminjamanTable').DataTable({
-                "pageLength": 5, // Jumlah data default yang ditampilkan
-                "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ], // Opsi jumlah data
-                "language": {
-                    "lengthMenu": "Tampilkan _MENU_ data",
-                    "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
-                    "search": "Cari:",
-                    "paginate": {
-                        "first": "Pertama",
-                        "last": "Terakhir",
-                        "next": "Berikutnya",
-                        "previous": "Sebelumnya"
-                    }
-                }
-            });
-        });
     </script>
   </body>
 </html>
